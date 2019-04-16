@@ -26,5 +26,6 @@
     transform: translateX(-100%);
 }
 .SideDrawLogo{
-    height:30%;
+    height:11%;
+    margin-bottom: 32px;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Burger.css';
-import BurgerIngredient from './BurgerIngedrent/BurgerIngredient'
+import BurgerIngredient from './BurgerIngedrent/BurgerIngredient';
 
 
 
