@@ -1,23 +1,24 @@
 import React from 'react';
-import classes from './Input.css';
+import  './Input.css';
 
 const Input = (props) => {
     let inputElement = null;
-    const inputClasses = [classes.inputElement];
+    const InputElement = ['InputElement'];
+    const invalidClass = 'Invalid'
     if (props.invalid){
-        inputClasses.push(classes.Invalid)
-    }
+        InputElement.push(invalidClass)
+        }
     switch (props.elementType){
         case('input'):
         inputElement = 
-            <input className= {inputClasses.join(' ')}
+            <input className= {InputElement.join(' ')}
             {...props.elementConfig} 
             value={props.value}
             onChange={props.handleChange}/>;
         break;
         case('textArea'):
         inputElement = 
-            < textarea className={inputClasses.join(' ')}
+            < textarea className={InputElement.join(' ')}
             {...props.elementConfig} 
             value={props.value}
             onChange={props.handleChange}
@@ -25,7 +26,7 @@ const Input = (props) => {
         break;
         case('select'):
         inputElement = (
-                        < select className={inputClasses.join(' ')}
+                        < select className={InputElement.join(' ')}
                         onChange={props.handleChange}
                         value={props.value}>
                             {props.elementConfig.options.map(option =>(
@@ -37,13 +38,13 @@ const Input = (props) => {
         break;
         default:
         inputElement = 
-            <input className={inputClasses.join(' ')}
+            <input className={InputElement.join(' ')}
             {...props.elementConfig} 
             value={props.value}/>
     }
     return(
-        <div className={classes.inputElement}>
-            <label className={classes.Label}>{props.label}</label>
+        <div className={InputElement.join(' ')}>
+            <label className="Label">{props.label}</label>
             {inputElement}
         </div>
     );
