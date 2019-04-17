@@ -5,7 +5,7 @@ const Input = (props) => {
     let inputElement = null;
     const InputElement = ['InputElement'];
     const invalidClass = 'Invalid'
-    if (props.invalid){
+    if (props.invalid && props.shouldValidate && props.touched){
         InputElement.push(invalidClass)
         }
     switch (props.elementType){

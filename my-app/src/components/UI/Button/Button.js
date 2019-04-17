@@ -5,6 +5,7 @@ const Button = (props)=>{
     return(
         <button 
                 className = "Button"
+                disabled = {props.disabled}
                 className = {props.btnType}
                 onClick ={props.clicked}>
                 {props.children}
